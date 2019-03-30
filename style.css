@@ -1,0 +1,77 @@
+body {
+    margin: 5px;
+}
+h1 , h2 {
+    width: 100%; 
+    padding: 0;
+    text-align: center;
+}
+h3 {
+    width: 100%; 
+    padding: 0;
+    text-align: center;
+    color: aliceblue;
+    background-color:#3c421a;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    align-text: 
+} 
+ul{
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}
+img{
+    width:100%;
+}
+.grid-item{
+    border: 1px solid black;
+    box-sizing: border-box;
+    height: 625px;
+    margin: 5px;
+}
+li:nth-child(n+2){
+    width: calc(50% - 10px);
+    float: left;
+}
+#grid-flex .grid-item{
+    display: flex;
+    flex-wrap: wrap;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+/*Nexus 7 tablet has the smallest widt w 600px*/ 
+@media (min-width: 480px){
+    li:nth-child(1){
+        width: calc(50% - 10px);
+        float: left;}
+    li:nth-child(2){
+        width: calc(50% - 10px);
+        float: left;}
+    li:nth-child(n+3){
+        width: calc(33.333% - 10px);
+        float: left;}
+}
+/*computer screen	1024 x 768 */ 
+@media (min-width: 1024px){
+li:nth-child(1){
+    width: calc(50% - 10px);
+    float: left;}
+li:nth-child(n+2){
+    width: calc(25% - 10px);
+    float: left;}
+}
